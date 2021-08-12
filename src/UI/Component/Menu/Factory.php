@@ -82,7 +82,8 @@ interface Factory
      *
      * ---
      * @param 	string $label
-     * @param 	array<Component\Menu\Sub | Component\Clickable| Divider\Horizontal| Divider\Horizontal> $items     * @return 	\ILIAS\UI\Component\Menu\Sub
+     * @param 	array<Component\Menu\Sub | Component\Clickable| Divider\Horizontal> $items
+     * @return 	\ILIAS\UI\Component\Menu\Sub
      */
     public function sub(string $label, array $items) : Sub;
 }

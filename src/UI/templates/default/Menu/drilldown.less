@@ -1,3 +1,5 @@
+@il-drilldown-item-height: 48px;
+
 .il-drilldown {
 	// reset user agent CSS
 	ul, li {
@@ -17,8 +19,10 @@
 		position: relative; // so backnav can be positioned on top
 		display: flex;
 		align-items: center;
+		min-height: @il-drilldown-item-height;
 		margin-bottom: @il-slate-content-spacing;
-		padding: @il-slate-bulky-padding;
+		padding: @il-padding-large-vertical @il-padding-large-horizontal;
+		padding-left: 0;
 		h2 {
 			// remove default headline margin, headline is centered using flex
 			margin: 0;
@@ -47,7 +51,7 @@
 		}
 	}
 	header.show-backnav {
-		padding-left: @il-slate-bulky-glyph-size * 2;
+		padding-left: @il-slate-bulky-glyph-size * 2; // make room for back arrow icon
 		.backnav {
 			display: block;
 		}
@@ -76,13 +80,14 @@
 	.link-bulky {
 		position: relative;
 		display: flex;
-		align-items: center;
+		align-items: center; // arrow glyphs and labels are vertically centered
 		justify-content: space-between;
 		width: 100%;
-		padding: @il-slate-bulky-padding;
+		min-height: @il-drilldown-item-height; // two lines fit into the item before it pushes the height
+		padding: @il-padding-large-vertical @il-padding-large-horizontal;
 		margin-bottom: @il-slate-content-spacing;
 		font-size: @il-slate-bulky-label-size;
-		line-height: @il-slate-bulky-label-size * 1.133333333333333;
+		line-height: @il-line-height-base;
 	}
 
 	// styling for individual menu items (parts taken from slate.less)
@@ -110,8 +115,9 @@
 		    color: inherit;
 		}
 		.icon {
-			align-self: flex-start;
-			margin-top: @padding-small-vertical;
+			align-self: flex-start; // icons stick to top of item
+			margin-top: @il-padding-base-vertical * 2.5;
+			margin-bottom: @il-padding-base-vertical * 2.5; // so large icons push the height of the item equally with text in vertical center
 			margin-right: @il-slate-bulky-glyph-margin-right;
 			filter: invert(50%);
 		}

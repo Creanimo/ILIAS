@@ -1277,4 +1277,37 @@ interface Factory
      * @return	\ILIAS\UI\Component\Symbol\Glyph\Glyph
      */
     public function filter(string $action = null) : Glyph;
+
+    /**
+     * ---
+     * description:
+     *   purpose: >
+     *       The Collapse Horizontal Glyph is used to trigger the collapsing of
+     *       some neighbouring Container Collection such as a Slate or to navigate
+     *       within a menu where collapsing might mean "switching to a higher level".
+     *       The Collapse Horizontal Glyph is used where collapsing is better
+     *       indicated by a left-triangle than by a down-triangle.
+     *   composition: >
+     *       The Collapse Glyph is composed of a triangle pointing to the left.
+     *   effect: >
+     *      Clicking the Collapse Glyph hides the display of some Container Collection.
+     *   rivals:
+     *      Expand Glyph: The Expand Glyphs triggers the display of some Container Collection.
+     *      Collapse Glyph: The Previous/Next Glyph opens a completely new view. It serves a navigational purpose.
+     *      Previous Glyph: The Previous/Next Glyph opens a completely new view. It serves a navigational purpose.
+     *
+     * context:
+     *    -  The Collapse Glyph appears in the Drilldown Menu.
+     *    -  The Collapse Glyph appears in Main Bar to hide Slates.
+     *
+     * rules:
+     *   accessibility:
+     *       1: >
+     *          The aria-label MUST be ‘collapse/back'.
+     * ---
+     * @param   string|null $action
+     * @return  \ILIAS\UI\Component\Symbol\Glyph\Glyph
+     */
+    public function collapseHorizontal(string $action = null) : Glyph;
+
 }

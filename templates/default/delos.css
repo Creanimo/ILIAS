@@ -10571,6 +10571,10 @@ footer {
   font-family: il-icons;
   content: "\e904";
 }
+.glyphicon-triangle-left:before {
+  font-family: il-icons;
+  content: "\e605";
+}
 .glyphicon-user:before {
   font-family: il-icons;
   content: "\e001";

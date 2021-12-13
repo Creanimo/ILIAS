@@ -6635,7 +6635,9 @@ button.close {
 .modal-footer:before,
 .modal-footer:after,
 .il-table-presentation-row .il-table-presentation-row-expanded:before,
-.il-table-presentation-row .il-table-presentation-row-expanded:after {
+.il-table-presentation-row .il-table-presentation-row-expanded:after,
+.ilContainerItemsContainer:before,
+.ilContainerItemsContainer:after {
   display: table;
   content: " ";
 }
@@ -6655,7 +6657,8 @@ button.close {
 .panel-body:after,
 .modal-header:after,
 .modal-footer:after,
-.il-table-presentation-row .il-table-presentation-row-expanded:after {
+.il-table-presentation-row .il-table-presentation-row-expanded:after,
+.ilContainerItemsContainer:after {
   clear: both;
 }
 .center-block {
@@ -19148,4 +19151,78 @@ table.mceToolbar td {
   line-height: 2;
   border: 1px solid #dddddd;
   border-radius: 0.25em;
+}
+.ilContainerItemsContainer {
+  margin-right: -15px;
+  margin-left: -15px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  margin: 0 -30px;
+}
+.ilContainerItemsContainer .ilCLI.ilObjListRow.row {
+  margin: 0px;
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+@media (min-width: 768px) {
+  .ilContainerItemsContainer .ilCLI.ilObjListRow.row {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .ilContainerItemsContainer .ilCLI.ilObjListRow.row {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+.il-layout-page.with-mainbar-slates-engaged .ilContainerBlock.container-fluid.form-inline .ilContainerItemsContainer .ilCLI.ilObjListRow.row {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+@media (min-width: 768px) {
+  .il-layout-page.with-mainbar-slates-engaged .ilContainerBlock.container-fluid.form-inline .ilContainerItemsContainer .ilCLI.ilObjListRow.row {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .il-layout-page.with-mainbar-slates-engaged .ilContainerBlock.container-fluid.form-inline .ilContainerItemsContainer .ilCLI.ilObjListRow.row {
+    float: left;
+    width: 50%;
+  }
+}
+.row .row .row .ilContainerBlock.container-fluid.form-inline .ilContainerItemsContainer .ilCLI.ilObjListRow.row {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+@media (min-width: 768px) {
+  .row .row .row .ilContainerBlock.container-fluid.form-inline .ilContainerItemsContainer .ilCLI.ilObjListRow.row {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .row .row .row .ilContainerBlock.container-fluid.form-inline .ilContainerItemsContainer .ilCLI.ilObjListRow.row {
+    float: left;
+    width: 100%;
+  }
 }
